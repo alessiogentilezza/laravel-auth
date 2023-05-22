@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-    <div class="container d-flex">
+    <div class="container d-flex flex-wrap ">
         @foreach ($projects as $project)
             <div class="card m-3" style="width: 18rem;">
                 <img src="{{ $project->cover_image }}" class="card-img-top p-3" alt="...">
