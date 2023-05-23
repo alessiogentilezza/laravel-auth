@@ -12,9 +12,17 @@
                     <h5 class="card-title">{{ $project->title }}</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                         card's content.</p>
-                        <a class="btn btn-primary" href="{{ route('admin.projects.show', $project->slug) }}">Vedi</a>
-                        <a class="btn btn-warning" href="{{ route('admin.projects.edit', $project->slug) }}">Modifica</a>
-                        <a href="{{ $project->link }}" class="ms-5 btn btn-success">Vai</a>
+                    <a class="btn btn-primary" href="{{ route('admin.projects.show', $project->slug) }}">Vedi</a>
+                    <a class="btn btn-warning" href="{{ route('admin.projects.edit', $project->slug) }}">Modifica</a>
+                    <a href="{{ $project->link }}" class="ms-3 btn btn-success">Vai</a>
+
+                    <form action="{{ route('admin.projects.destroy', ['project' => $project->slug]) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" onclick="return confirm('Sei sicuro che vuoi eliminare questo progetto?')"
+                            class="mt-3 btn btn-danger">Elimina</button>
+                    </form>
+
                 </div>
             </div>
         @endforeach
