@@ -7,7 +7,7 @@
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                 card's content.</p>
             <a href="{{ $project->link }}" class="btn btn-success">Vai</a>
-            <a class="btn btn-warning" href="{{ route('admin.projects.index') }}">Lista preogetti</a>
+            <a class="btn btn-primary" href="{{ route('admin.projects.index') }}">Lista preogetti</a>
         </div>
     </div>
 @endsection
