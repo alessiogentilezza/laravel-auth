@@ -4,6 +4,8 @@ namespace Database\Seeders;
 use App\Models\Project;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Str; // <- da importare
+
 
 class ProjectSeeder extends Seeder
 {
@@ -21,7 +23,7 @@ class ProjectSeeder extends Seeder
             $newProject->title = $project["title"];
             $newProject->link = $project["link"];
             $newProject->cover_image = $project["cover_image"];
-            $newProject->slug = $project["slug"];
+            $newProject->slug = Str::slug($newProject->title, '-');
             $newProject->save();
         }
     }

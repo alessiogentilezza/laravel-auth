@@ -21,16 +21,13 @@
 
 <body>
     <div id="app">
-
         @include('partials.header')
-
         <main class="">
             <div class="container-fluid">
                 <div class='row'>
                     <div class="col-2">
                         @include('partials.sidebar')
                     </div>
-
                     <div class="col-10">
                         @yield('content')
                     </div>
