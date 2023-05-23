@@ -1,4 +1,7 @@
 @extends('layouts.admin')
+
+@section('page-title', $project->title)
+
 @section('content')
     <div class="card m-3" style="width: 18rem;">
         <img src="{{ $project->cover_image }}" class="card-img-top p-3" alt="...">
